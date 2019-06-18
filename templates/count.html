@@ -1,0 +1,12 @@
+<h1>There are {{text_count}} word(s) in your text</h1>
+
+<a href="{% url 'home' %}">Input New Text</a>
+
+<h1>Your Text:</h1><br/>
+{{ fulltext }}
+
+<h1>Word count</h1>
+{% for word, counttotal in sortedwords%}
+    {{ word }} : {{ counttotal }}
+    <br/>
+{% endfor %}
